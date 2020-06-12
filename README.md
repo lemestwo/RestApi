@@ -19,7 +19,9 @@ Navigate to [localhost:8000](https://localhost:8000/api/product) or use Routes a
 
 ### Get - [GET] /api/product
 **You get:** List with all products.
+
 **Request:**
+
 **Successful Response:**
 ```json
 [
@@ -40,8 +42,11 @@ Navigate to [localhost:8000](https://localhost:8000/api/product) or use Routes a
 
 ### Get - [GET] /api/product/:id
 **You send:**  Product id
+
 **You get:** Json with information about the product.
+
 **Request:** GET /api/product/2
+
 **Successful Response:**
 ```json
 [
@@ -63,7 +68,9 @@ Navigate to [localhost:8000](https://localhost:8000/api/product) or use Routes a
 
 ### Post - [POST] /api/product
 **You send:**  Your form data. Fields: flavor and size. Optionals: custom1, custom2, custom3 fields.
+
 **You get:** Feedback about insert new entry to the database
+
 **Request:**
 ```json
 {
@@ -118,7 +125,9 @@ Navigate to [localhost:8000](https://localhost:8000/api/product) or use Routes a
 
 ### PUT - [PUT] /api/product/:id
 **You send:**  Your form data with an id. Fields: flavor and size. Optionals: custom1, custom2, custom3 fields.
+
 **You get:** Feedback about editing an entry
+
 **Request:** PUT /api/product/2
 ```json
 {
