@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  restapi:
+    image: ${DOCKER_REGISTRY-}restapi
+    build:
+      context: .
+      dockerfile: RestApi/Dockerfile
+
+  mysql:
+    image: mysql:8
+    restart: unless-stopped
+    ports:
+      - "8012:3306"
+    environment:
+      MYSQL_DATABASE: rest-api
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - database:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8013:80"
+    links:
+      - mysql:mysql
+    environment:
+      PMA_HOST: mysql
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+
+volumes:
+  database:
