@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>11da2300-1d5c-4889-b64c-56b9f70bd497</ProjectGuid>
+    <ProjectGuid>fbec0876-c6d6-4268-ada1-99105a26e15f</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/product</DockerServiceUrl>
     <DockerServiceName>restapi</DockerServiceName>

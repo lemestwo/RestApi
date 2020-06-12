@@ -61,15 +61,15 @@ You must have Docker-Compose.
 ```json
 {
     "query": [
-    	{
-	    	"key": "flavor",
-	    	"value": "3"
-	    },
-	    {
-    		"key": "size",
-	    	"value": "2"
-    	}
-    ]   
+        {
+            "key": "flavor",
+            "value": "3"
+        },
+        {
+            "key": "size",
+            "value": "2"
+        }
+    ]
 }
 ```
 
@@ -107,31 +107,33 @@ You must have Docker-Compose.
     ],
     "Flavor": []
 }
-``` 
+```
 
 ### PUT - [PUT] /api/product/:id
 **You send:**  Your form data with an id. Fields: flavor and size. Optionals: custom1, custom2, custom3 fields.
-**You get:** Feedback about editing an entry 
+**You get:** Feedback about editing an entry
 **Request:** PUT /api/product/2
 ```json
-"query": [
 {
-		"key": "flavor",
-		"value": "3"
-	},
-	{
-		"key": "size",
-		"value": "2"
-	},
-	{
-		"key": "custom1",
-		"value": "true"
-	},
-	{
-		"key": "custom2",
-		"value": "false"
-	}
-]
+    "query": [
+        {
+            "key": "flavor",
+            "value": "3"
+        },
+        {
+            "key": "size",
+            "value": "2"
+        },
+        {
+            "key": "custom1",
+            "value": "true"
+        },
+        {
+            "key": "custom2",
+            "value": "false"
+        }
+    ]
+}
 ```
 
 **Successful Response:**
@@ -171,5 +173,5 @@ You must have Docker-Compose.
     ],
     "Custom2": []
 }
-``` 
+```
 
