@@ -8,6 +8,13 @@
 
 You must have Docker-Compose.
 
+Run in the root folder.
+```json
+docker-compose build
+docker-compose up
+```
+Navigate to [localhost:8000](https://localhost:8000/api/product) or use Routes above:
+
 ## Routes
 
 ### Get - [GET] /api/product

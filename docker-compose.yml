@@ -1,11 +1,21 @@
 version: '3.4'
 
+networks:
+  rest-api-dev:
+    driver: bridge
+
 services:
   restapi:
     image: ${DOCKER_REGISTRY-}restapi
     build:
       context: .
       dockerfile: RestApi/Dockerfile
+    depends_on:
+      - "mysql"
+    ports:
+      - "8000:80"
+    networks:
+      - rest-api-dev
 
   mysql:
     image: mysql:8
@@ -17,6 +27,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - database:/var/lib/mysql
+    networks:
+      - rest-api-dev
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -28,6 +40,8 @@ services:
       PMA_HOST: mysql
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - rest-api-dev
 
 volumes:
   database:
